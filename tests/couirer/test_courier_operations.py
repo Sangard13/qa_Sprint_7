@@ -61,7 +61,6 @@ class TestCourierOperations:
     @pytest.mark.courier
     def test_delete_courier_without_id(self, courier_api):
         """Тест удаления курьера без ID"""
-        # Пытаемся удалить курьера с пустым ID
         response = courier_api.delete_courier("")
 
         Helpers.check_response_status(response, 400)
@@ -71,7 +70,6 @@ class TestCourierOperations:
     @pytest.mark.courier
     def test_get_orders_count_without_id(self, courier_api):
         """Тест получения количества заказов без ID курьера"""
-        # Пытаемся получить количество заказов без ID
         response = courier_api.get_orders_count("")
 
         Helpers.check_response_status(response, 400)

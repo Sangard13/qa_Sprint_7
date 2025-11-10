@@ -19,7 +19,6 @@ class TestCourierCreation:
         response_data = Helpers.extract_json(response)
         assert response_data.get("ok") == True
 
-        # Удаляем созданного курьера
         login_response = courier_api.login_courier(
             courier_data["login"],
             courier_data["password"]
